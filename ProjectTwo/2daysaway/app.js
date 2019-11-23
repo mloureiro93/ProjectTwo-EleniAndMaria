@@ -6,7 +6,7 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/homepage');
 const usersRouter = require('./routes/user');
 
 const app = express();
