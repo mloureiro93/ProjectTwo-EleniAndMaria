@@ -12,7 +12,7 @@ const MongoStore = require("connect-mongo")(expressSession);
 const mongoose = require("mongoose");
 // const connectMongo = require("connect-mongo");
 
-const indexRouter = require("./routes/homepage");
+const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/user");
 const authRouter = require("./routes/authentication");
 

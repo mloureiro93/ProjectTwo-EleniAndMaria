@@ -7,53 +7,54 @@ const bcryptjs = require("bcryptjs");
 //SIGN-UP
 
 router.get("/sign-up", (req, res, next) => {
-  res.render("sign-up");
+  res.render("Authentication/sign-up");
 });
 
 router.post("/sign-up", (req, res, next) => {
   const { username, email, password } = req.body;
-  User.findOne({ username: username })
-  .then(user=>{
+  User.findOne({ username: username }).then(user => {
     if (user) {
-      res.render("sign-up", {
-        errorMessage: "The username already exists!"
-      }).catch(err=>{
-        next(err);
-      })
+      res
+        .render("Authentication/sign-up", {
+          errorMessage: "The username already exists!"
+        })
+        .catch(err => {
+          next(err);
+        });
     } else {
       if (username === "" || password === "") {
-        res.render("sign-up", {
-          errorMessage: "Indicate a username and a password to sign up"})
-        } else {
-          bcryptjs.hash(password, 10)
+        res.render("Authentication/sign-up", {
+          errorMessage: "Indicate a username and a password to sign up"
+        });
+      } else {
+        bcryptjs
+          .hash(password, 10)
           .then(hash => {
-          return User.create({
-            username,
-            email,
-            passwordHash: hash
+            return User.create({
+              username,
+              email,
+              passwordHash: hash
+            });
           })
-        })
-            .then(user => {
-              req.session.user = user._id;
-              res.redirect("/");
-            })
-            .catch(error => {
-              next(error);
-            })
-
-        }
+          .then(user => {
+            req.session.user = user._id;
+            res.redirect("/");
+          })
+          .catch(error => {
+            next(error);
+          });
       }
     }
-  );
+  });
 });
 
 //LOGIN
 
-router.get('/login', (req, res, next) => {
-  res.render('login');
+router.get("/login", (req, res, next) => {
+  res.render("login");
 });
 
-router.post('/login', (req, res, next) => {
+router.post("/login", (req, res, next) => {
   let userId;
   const { username, password } = req.body;
   User.findOne({ username })
@@ -68,9 +69,9 @@ router.post('/login', (req, res, next) => {
     .then(result => {
       if (result) {
         req.session.user = userId;
-        res.redirect('/');
+        res.redirect("/");
       } else {
-        return Promise.reject(new Error('Wrong password.'));
+        return Promise.reject(new Error("Wrong password."));
       }
     })
     .catch(error => {
@@ -78,14 +79,11 @@ router.post('/login', (req, res, next) => {
     });
 });
 
-
 //SIGN-OUTT
 
-router.post('/sign-out', (req, res, next) => {
+router.post("/sign-out", (req, res, next) => {
   req.session.destroy();
-  res.redirect('/');
+  res.redirect("/");
 });
-
-
 
 module.exports = router;
