@@ -9,4 +9,20 @@ router.get('/', (req, res, next) => {
   });
 });
 
+//REVIEW POSTS
+
+router.get('/reviews', (req, res, next) => {
+  res.render('Post/listPosts')
+});
+
+router.get('/singlePost', (req, res, next) => {
+  res.render('Post/singlePost')
+});
+
+router.get('/userprofile', (req, res, next) => {
+  res.render('user')
+});
+
+
+
 module.exports = router;
