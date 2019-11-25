@@ -9,7 +9,8 @@
   </head>
   <nav>
       <a href="/">Home</a>
-      {{!-- Display relevant routes for non-authenticated vs. authenticated user --}}
+      <a href="/reviews">Reviews</a>
+     
       {{#if user}}
           <form action="/sign-out" method="POST">
           <button>Logout</button>
@@ -18,13 +19,14 @@
         <a href="/login">Login</a>
         <a href="/sign-up">Sign Up</a>
       {{/if}}
+      
    </nav>
   <body>
     {{{body}}}
   </body>
   <footer>
  {{#if user}}
-   <a href="/user">{{this.user.username}}'s Profile</a> 
+   <a href="/userprofile">{{this.user.username}}'s Profile</a> 
  {{/if}}
   </footer>
 </html>
