@@ -4,6 +4,8 @@ const router = new Router();
 const User = require("./../models/user");
 const bcryptjs = require("bcryptjs");
 
+//SIGN-UP
+
 router.get("/sign-up", (req, res, next) => {
   res.render("sign-up");
 });
@@ -45,26 +47,45 @@ router.post("/sign-up", (req, res, next) => {
   );
 });
 
+//LOGIN
+
+router.get('/login', (req, res, next) => {
+  res.render('login');
+});
+
+router.post('/login', (req, res, next) => {
+  let userId;
+  const { username, password } = req.body;
+  User.findOne({ username })
+    .then(user => {
+      if (!user) {
+        return Promise.reject(new Error("That user cannot be found."));
+      } else {
+        userId = user._id;
+        return bcryptjs.compare(password, user.passwordHash);
+      }
+    })
+    .then(result => {
+      if (result) {
+        req.session.user = userId;
+        res.redirect('/');
+      } else {
+        return Promise.reject(new Error('Wrong password.'));
+      }
+    })
+    .catch(error => {
+      next(error);
+    });
+});
 
 
+//SIGN-OUTT
 
-//   bcryptjs.hash(password, 10)
-//   .then(hash => {
-//     if (username === "" || password === "") {
-//     .then(()=>{
-//        return User.findOne({ username: username })
-//        .then(user => user !== null)
-//       })
- 
-//       res.render("sign-up", {
-//         errorMessage: "The username already exists!"
-//       });
-//     } else {
-     
-//     }
-//   });
-// });
+router.post('/sign-out', (req, res, next) => {
+  req.session.destroy();
+  res.redirect('/');
+});
 
-//   login
+
 
 module.exports = router;
