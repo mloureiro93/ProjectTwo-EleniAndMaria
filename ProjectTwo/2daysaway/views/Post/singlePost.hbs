@@ -1,7 +1,13 @@
-<h2>Create a new Post</h2>
+<h2>Single Post</h2>
 
-<form action="/post/createPost" method="POST" enctype="multipart/form-data">
-  <textarea name="text" maxlength="500" placeholder="Write your text here..." required></textarea>
-  <input type="file" name="images" multiple />
-  <button class="btn">Publish</button>
-</form>
+<div class="single-post">
+  {{#each this.images}}
+    <img src={{this.resizedUrl}}>
+  {{/each}}
+  <p>{{ this.text }}</p>
+  <small>{{ this.creationDate }}</small>
+  <br />
+  <small>{{ this.user.username }}</small>
+</div>
+
+<a href="/post/{{post._id}}/edit" class="btn">Edit Post</a>
