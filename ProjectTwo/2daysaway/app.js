@@ -5,10 +5,16 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const sassMiddleware = require("node-sass-middleware");
 const serveFavicon = require("serve-favicon");
+const User = require("./models/user");
+
+const expressSession = require("express-session");
+const MongoStore = require("connect-mongo")(expressSession);
+const mongoose = require("mongoose");
+// const connectMongo = require("connect-mongo");
 
 const indexRouter = require("./routes/homepage");
 const usersRouter = require("./routes/user");
-const authRouter = require("./routes/authentication")
+const authRouter = require("./routes/authentication");
 
 const app = express();
 
@@ -30,9 +36,49 @@ app.use(
 );
 app.use(express.static(join(__dirname, "public")));
 
+app.use(cookieParser());
+
+app.use(
+  expressSession({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 60 * 60 * 24 * 15,
+      sameSite: true,
+      httpOnly: true,
+      secure: process.env.NODE_ENV !== "development"
+    },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 60 * 60 * 24
+    })
+  })
+);
+
+  app.use((req, res, next) => {
+    const userId = req.session.user;
+    if (userId) {
+      User.findById(userId)
+        .then(user => {
+          req.user = user;
+          res.locals.user = req.user;
+          next();
+        })
+        .catch(error => {
+          next(error);
+        });
+    } else {
+      next();
+    }
+  });
+
+
 app.use("/", indexRouter);
 app.use("/", authRouter);
 // app.use('/user', usersRouter);
+
+
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
