@@ -1,96 +1,96 @@
 const mongoose = require('mongoose');
 
 const poiSchema = new mongoose.Schema({
-  _id: "",
-  city_name: "",
-  city_description: "",
-  country: "",
-  currency: "",
-  language: "",
+  _id: String,
+  city_name: String,
+  city_description: String,
+  country: String,
+  currency: String,
+  language: String,
   steps: [{
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
     }, {
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 1,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
     },
     {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
     }, {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
 
     }, {
-      day: 2,
-      name: "",
-      description: "",
-      photo: "",
-      website: ""
+      day: Number,
+      name: String,
+      description: String,
+      photo: String,
+      website: String
     }
   ]
-})
+});
 
 const Poi = mongoose.model('Poi', poiSchema);
 
