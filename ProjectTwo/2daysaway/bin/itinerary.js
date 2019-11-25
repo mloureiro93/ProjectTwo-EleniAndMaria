@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Poi = require('./models/POI');
-const data = require('./bin/data');
-const URI = "mongodb://127.0.0.1:27017/2daysaway-database";
+const Poi = require('../models/POI');
+const data = require('./data');
+const URI = process.env.MONGODB_URI;
 
 
 const cities = [{
