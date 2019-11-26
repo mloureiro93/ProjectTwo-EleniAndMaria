@@ -194,3 +194,5 @@ Poi.create(cities)
   .catch(err => {
     console.error('Error connecting to mongo', err);
   });
+
+module.exports = cities;

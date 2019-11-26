@@ -2,8 +2,12 @@
 <p>Welcome to 2 Day Away{{title}}</p>
 
 
-{{!-- {{#if user}} --}}
-<a href="/day1">Find out where your next Adventure begins</a>
-{{!-- {{else}}
-<a href="Authentication/sign-up">Find out where your next Adventure begins</a>
-{{/if}} --}}
+{{#if user}}
+<a href="/tripSelection">Begin your Adventure!</a>
+{{else}}
+<a href="/sign-up">Find out where your next Adventure begins</a>
+{{/if}}
+
+
+
+{{!-- <a href="/day1">Find out where your next Adventure begins</a> --}}

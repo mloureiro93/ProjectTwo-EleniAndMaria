@@ -1,11 +1,11 @@
-{{!-- 
+<form action="/tripSelection" method="POST">
+  <label for="input-travelingFrom">Where will you be Traveling from:</label>
+  <input type="text" id="input-travelingFrom" name="travelingFrom" placeholder="Enter the city of your departure" />
+  <button>Find out where your next Adventure begins</button>
+</form>
 
-app.get('/tripSelection', (request, response) => {
-response.render('Itinerary/tripSelection');
-});
+{{city.city_name}}
 
-app.get('Itinerary/tripSelection', (request, response) => {
-const poisId = Math.floor(Math.random() * 2),
-
-response.render('Itinerary/day1', randomDestination);
-}); --}}
+{{#if errorMessage}}
+<div class="error-message">{{ errorMessage }}</div>
+{{/if}}
