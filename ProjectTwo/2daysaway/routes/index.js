@@ -1,4 +1,6 @@
-const { Router } = require("express");
+const {
+  Router
+} = require("express");
 const router = new Router();
 
 function randomIndex(array) {
@@ -24,6 +26,10 @@ router.get("/", (req, res, next) => {
 router.get("/userprofile", (req, res, next) => {
   res.render("user");
 });
+
+
+
+
 
 //routes for selectionPage
 router.get("/tripSelection", (req, res, next) => {
