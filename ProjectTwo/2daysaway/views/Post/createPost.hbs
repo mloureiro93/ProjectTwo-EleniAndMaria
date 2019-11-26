@@ -1,7 +1,7 @@
 <h2>Create a new Post</h2>
 
-<form action="/createPost" method="POST">
+<form action="/post/createPost" method="POST" enctype="multipart/form-data">
     <textarea name="text" maxlength="500" placeholder="Write your text here..." required></textarea>
-    <input type="file" name="images" multiple />
+    <input type="file" name="file" multiple />
     <button class="btn">Publish</button>
 </form>

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema(
   {
@@ -9,25 +9,24 @@ const postSchema = new mongoose.Schema(
       minlength: 1
     },
     author: {
-      type: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: 'User'
+      ref: "User"
     },
     images: [
       {
-        type: mongoose.Types.ObjectId,
-        ref: 'Image'
+        type: String
       }
     ]
   },
   {
     timestamps: {
-      createdAt: 'creationDate',
-      updatedAt: 'updateDate'
+      createdAt: "creationDate",
+      updatedAt: "updateDate"
     }
   }
 );
 
-const Post = mongoose.model('Post', postSchema);
+const Post = mongoose.model("Post", postSchema);
 
 module.exports = Post;

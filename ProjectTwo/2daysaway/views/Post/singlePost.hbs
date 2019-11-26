@@ -1,13 +1,7 @@
 <h2>Single Post</h2>
 
-<div class="single-post">
-  {{#each this.images}}
-    <img src={{this.resizedUrl}}>
-  {{/each}}
-  <p>{{ this.text }}</p>
-  <small>{{ this.creationDate }}</small>
-  <br />
-  <small>{{ this.user.username }}</small>
-</div>
+{{#with post}}
+  {{> singlepost}}
+{{/with}}
 
-<a href="/post/{{post._id}}/editPost" class="btn">Edit Post</a>
+<a href="/post/{{post._id}}/edit" class="btn">Edit Post</a>

@@ -1,6 +1,7 @@
 <h1>Read what our users think of our services!</h1>
 
-
 {{#each posts}}
-  <a href="/singlePost/{{ this._id }}"> </a>
+<a href="/post/{{ this._id }}">
+  {{> singlePost}}
+</a>
 {{/each}}

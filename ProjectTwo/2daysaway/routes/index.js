@@ -5,38 +5,24 @@ const router = new Router();
 
 const Poi = require("./../models/POI");
 
+const Post = require('./../models/post');
+
+const routeGuard = require('./../middleware/route-guard');
+
+const uploader= require('./../middleware/cloudinary-config');
+
 router.get("/", (req, res, next) => {
   res.render("homepage", {
     title: "2Days Away"
   });
 });
 
-//REVIEW POSTS
 
-router.get("/reviews", (req, res, next) => {
-  res.render("Post/listPosts");
-});
-
-router.get("/createPost", (req, res, next) => {
-  res.render("Post/createPost");
-});
-
-router.post("/createPost", (req, res, next) => {
- 
-  const name = req.body.text;
-  //console.log("HERE -> REQ.BODY-------", name);
-  res.redirect("/userprofile");
-});
-
-router.get("/editPost", (req, res, next) => {
-  res.render("Post/editPost");
-});
-
+//user profile
 
 router.get("/userprofile", (req, res, next) => {
   res.render("user");
 });
-
 
 
 //Routes for Itinerary (Day1 & Day2)

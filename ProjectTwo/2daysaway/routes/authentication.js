@@ -53,7 +53,7 @@ router.post("/sign-up", (req, res, next) => {
 //LOGIN
 
 router.get("/login", (req, res, next) => {
-  res.render("login");
+  res.render("Authentication/login");
 });
 
 router.post("/login", (req, res, next) => {

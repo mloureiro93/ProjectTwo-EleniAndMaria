@@ -1,0 +1,12 @@
+<div class="single-post">
+
+  {{#each this.images}}
+  <img src={{this}}>
+  {{/each}}
+
+
+  <p>{{ this.text }}</p>
+  <small>{{ this.creationDate }}</small>
+  <br />
+  <small>{{ this.author.username }}</small>
+</div>
