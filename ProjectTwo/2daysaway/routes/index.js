@@ -29,20 +29,12 @@ router.get("/userprofile", (req, res, next) => {
 });
 
 
-<<<<<<< HEAD
-//Routes for Itinerary (Day1 & Day2)
-router.get("/day1", (req, res, next) => {
-  Poi.find().then(result => {
-    res.render("Itinerary/day1", result[0]);
-  });
-=======
 
 
 
 //routes for selectionPage
 router.get("/tripSelection", (req, res, next) => {
   res.render("Itinerary/tripSelection");
->>>>>>> 987bd5b8473e4f4be7de843e17ad64c9eb3fb363
 });
 
 router.post("/tripSelection", (req, res, next) => {

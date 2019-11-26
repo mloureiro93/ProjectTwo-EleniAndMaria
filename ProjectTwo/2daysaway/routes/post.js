@@ -11,15 +11,17 @@ const uploader = require("./../middleware/cloudinary-config");
 
 //list of the user's posts
 
-router.get("/userPostList/:id", routeGuard, (req, res, next) => {
+router.get("/userPostList", routeGuard, (req, res, next) => {
   console.log(req.user.id);
-  console.log(req.params.id);
+  // console.log(req.params.id);
 
-  Post.find({ author: req.params.id })
+  // Post.find({ author: req.params.id })
+  Post.find({ author: req.user.id })
+
     .sort({ creationDate: -1 })
     .populate("author")
     .then(posts => {
-      res.render("Post/listPosts", { posts });
+      res.render("Post/userPostList", { posts });
     })
     .catch(error => {
       next(error);
@@ -74,10 +76,11 @@ router.post(
 
 router.get("/:postId", (req, res, next) => {
   const postId = req.params.postId;
+  console.log("NOTICE ME", postId);
   Post.findById(postId)
-    .populate("author images")
+    .populate("author")
     .then(post => {
-      console.log(post);
+      console.log("POST FEEEEDBACK", post);
       res.render("Post/singlePost", { post });
     })
     .catch(error => {
@@ -91,7 +94,7 @@ router.get("/:postId/edit", routeGuard, (req, res, next) => {
   const postId = req.params.postId;
   Post.findById(postId)
     .then(post => {
-      if (post.author === req.session.user) {
+      if (post.author.toString() === req.session.user.toString()) {
         res.render("Post/editPost", { post });
       } else {
         next(new Error("User has no permission to edit post."));
@@ -129,7 +132,7 @@ router.post("/:postId/delete", routeGuard, (req, res, next) => {
     author: req.session.user
   })
     .then(data => {
-      res.redirect(`/post/list`);
+      res.redirect("/post/userPostList");
     })
     .catch(error => {
       next(error);
