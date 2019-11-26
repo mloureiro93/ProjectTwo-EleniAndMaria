@@ -18,11 +18,16 @@ router.get("/createPost", (req, res, next) => {
 });
 
 router.post("/createPost", (req, res, next) => {
-  console.log("----here-----");
+ 
   const name = req.body.text;
-  console.log("HERE -> REQ.BODY-------", name);
+  //console.log("HERE -> REQ.BODY-------", name);
   res.redirect("/userprofile");
 });
+
+router.get("/editPost", (req, res, next) => {
+  res.render("Post/editPost");
+});
+
 
 router.get("/userprofile", (req, res, next) => {
   res.render("user");
