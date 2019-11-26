@@ -1,46 +1,44 @@
 <div class="first-day-itinerary">
-  <h1>Enjoy your new two-day adventure to wonderful {{this.city_name}}!</h1>
-  <h2>{{this.city_description}}</h2>
+  <h1>Day 1: </h1>
+  <h1>Enjoy your new two-day adventure to wonderful {{city_name}}!</h1>
+  <h2>{{city_description}}</h2>
   <section>
     <div>
-      <h3>Start your day with a delicious breakfast at {{this.steps[0].name}}</h3>
-      <img src="{{this.steps[0].photo}}">
-      <p>{{this.steps[0].description}}</p>
-
+      <h3>Start your day with a delicious breakfast at {{steps.[0].name}}</h3>
+      <img src="{{steps.[0].photo}}">
+      <p>{{steps.[0].description}}</p>
+      <a href="{{steps.[0].website}}">Check out the Reviews and Menu here!</a>
     </div>
     <div>
-      <h3>Begin your trip with a visit to {{this.steps[1].name}}</h3>
-      <img src="{{this.steps[1].photo}}">
-      <p>{{this.steps[1].description}}</p>
+      <h3>Begin your trip with a visit to {{this.steps.[1].name}}</h3>
+      <img src="{{this.steps.[1].photo}}">
+      <p>{{this.steps.[1].description}}</p>
+      <a href="{{this.steps.[1].website}}">Find more Information here!</a>
     </div>
     <div>
-      <h3>A delicious lunch awaits you at {{this.steps[2].name}}</h3>
-      <img src="{{this.steps[2].photo}}">
-      <p>{{this.steps[2].description}}</p>
+      <h3>A delicious lunch awaits you at {{this.steps.[2].name}}</h3>
+      <img src="{{this.steps.[2].photo}}">
+      <p>{{this.steps.[2].description}}</p>
+      <a href="{{this.steps.[2].website}}">Check out the Reviews and Menu here!</a>
     </div>
     <div>
-      <h3>Discover the beauty of {{this.steps[3].name}} </h3>
-      <img src="{{this.steps[3].photo}}">
-      <p>{{this.steps[3].description}}</p>
+      <h3>Discover the beauty of {{this.steps.[3].name}} </h3>
+      <img src="{{this.steps.[3].photo}}">
+      <p>{{this.steps.[3].description}}</p>
+      <a href="{{this.steps.[3].website}}">Find more Information here!</a>
     </div>
     <div>
-      <h3>Dine with style at restaurant {{this.steps[4].name}}</h3>
-      <img src="{{this.steps[4].photo}}">
-      <p>{{this.steps[4].description}}</p>
+      <h3>Dine with style at restaurant {{this.steps.[4].name}}</h3>
+      <img src="{{this.steps.[4].photo}}">
+      <p>{{this.steps.[4].description}}</p>
+      <a href="{{this.steps.[4].website}}">Check out the Reviews and Menu here!</a>
     </div>
     <div>
-      <h3>Wrap up your evening by visiting majestic {{this.steps[5].name}}</h3>
-      <img src="{{this.steps[5].photo}}">
-      <p>{{this.steps[5].description}}</p>
+      <h3>Wrap up your evening by visiting majestic {{this.steps.[5].name}}</h3>
+      <img src="{{this.steps.[5].photo}}">
+      <p>{{this.steps.[5].description}}</p>
+      <a href="{{this.steps.[5].website}}">Find more Information here!</a>
     </div>
   </section>
-
-
-  {{!-- <div class="single-prod-img"><img src="{{this.image_url}}"></div>
-  <div class="prod-info">
-    <h3>{{this.name}}</h3>
-    <h4>{{this.tagline}}</h4>
-    <p>{{this.description}}</p>
-  </div> --}}
-
+  <a href="/day2">View Day 2 of your Trip</a>
 </div>

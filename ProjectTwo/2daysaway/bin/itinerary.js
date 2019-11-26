@@ -84,7 +84,7 @@ const cities = [{
         day: 2,
         name: "Statue of Andersen",
         description: "If you enjoy walking while in a new city be sure to set your director include a walk to the HC Anderson monument. The statue stands at an impressive location with the vast plads the old buildings.",
-        photo: "https://res.cloudinary.com/nena/image/upload/v1574677904/ProjectTwo-EleniAndMaria/Copenhagen/Statue_of_Andersen_qcofnn.pngv",
+        photo: "https://res.cloudinary.com/nena/image/upload/v1574677904/ProjectTwo-EleniAndMaria/Copenhagen/Statue_of_Andersen_qcofnn.png",
         website: "https://www.routesnorth.com/copenhagen/hans-christian-andersen-sights-in-copenhagen/"
       }
     ]
@@ -182,7 +182,7 @@ const cities = [{
 ];
 
 mongoose
-  .connect(URI, {
+  .connect("mongodb://127.0.0.1:27017/2daysaway-database", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
@@ -193,4 +193,4 @@ Poi.create(cities)
   .then(() => mongoose.connection.close())
   .catch(err => {
     console.error('Error connecting to mongo', err);
-  })
+  });

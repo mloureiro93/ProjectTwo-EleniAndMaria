@@ -1,4 +1,6 @@
-const { join } = require("path");
+const {
+  join
+} = require("path");
 const express = require("express");
 const createError = require("http-errors");
 const cookieParser = require("cookie-parser");
@@ -6,6 +8,7 @@ const logger = require("morgan");
 const sassMiddleware = require("node-sass-middleware");
 const serveFavicon = require("serve-favicon");
 const User = require("./models/user");
+
 
 const expressSession = require("express-session");
 const MongoStore = require("connect-mongo")(expressSession);
@@ -22,15 +25,16 @@ app.set("views", join(__dirname, "views"));
 app.set("view engine", "hbs");
 
 app.use(logger("dev"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(cookieParser());
 app.use(serveFavicon(join(__dirname, "public/images", "favicon.ico")));
 app.use(
   sassMiddleware({
     src: join(__dirname, "public"),
     dest: join(__dirname, "public"),
-    outputStyle:
-      process.env.NODE_ENV === "development" ? "nested" : "compressed",
+    outputStyle: process.env.NODE_ENV === "development" ? "nested" : "compressed",
     sourceMap: true
   })
 );
@@ -56,22 +60,24 @@ app.use(
   })
 );
 
-  app.use((req, res, next) => {
-    const userId = req.session.user;
-    if (userId) {
-      User.findById(userId)
-        .then(user => {
-          req.user = user;
-          res.locals.user = req.user;
-          next();
-        })
-        .catch(error => {
-          next(error);
-        });
-    } else {
-      next();
-    }
-  });
+app.use((req, res, next) => {
+  const userId = req.session.user;
+  if (userId) {
+    User.findById(userId)
+      .then(user => {
+        req.user = user;
+        res.locals.user = req.user;
+        next();
+      })
+      .catch(error => {
+        next(error);
+      });
+  } else {
+    next();
+  }
+});
+
+
 
 
 app.use("/", indexRouter);

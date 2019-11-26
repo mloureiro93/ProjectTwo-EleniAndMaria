@@ -1,5 +1,9 @@
-const { Router } = require("express");
+const {
+  Router
+} = require("express");
 const router = new Router();
+
+const Poi = require("./../models/POI");
 
 router.get("/", (req, res, next) => {
   res.render("homepage", {
@@ -26,6 +30,21 @@ router.post("/createPost", (req, res, next) => {
 
 router.get("/userprofile", (req, res, next) => {
   res.render("user");
+});
+
+
+
+//Routes for Itinerary (Day1 & Day2)
+router.get("/day1", (req, res, next) => {
+  Poi.find().then(result => {
+    res.render("Itinerary/day1", result[0]);
+  });
+});
+
+router.get("/day2", (req, res, next) => {
+  Poi.find().then(result => {
+    res.render("Itinerary/day2", result[0]);
+  });
 });
 
 module.exports = router;
