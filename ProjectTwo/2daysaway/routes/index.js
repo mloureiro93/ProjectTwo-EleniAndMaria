@@ -1,4 +1,6 @@
-const { Router } = require("express");
+const {
+  Router
+} = require("express");
 const router = new Router();
 
 function randomIndex(array) {
@@ -32,12 +34,17 @@ router.get("/tripSelection", (req, res, next) => {
 
 router.post("/tripSelection", (req, res, next) => {
   const city = req.body.travelingFrom;
-  console.log("NOTICEEEE ME", city);
   let filteredArray;
   Poi.find({}).then(cities => {
     filteredArray = cities.filter(item => item.city_name !== city);
     const randomCity = filteredArray[randomIndex(filteredArray)];
-    res.redirect("/tripSelection/" + randomCity._id);
+    if (city === "") {
+      res.render("Itinerary/tripSelection", {
+        errorMessage: "Insert your departure point"
+      });
+    } else {
+      res.redirect("/tripSelection/" + randomCity._id);
+    }
   });
 });
 

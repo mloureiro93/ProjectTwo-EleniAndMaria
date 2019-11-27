@@ -2,12 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Baskervville", serif;
-<<<<<<< HEAD
   color: #2C342F;
   background-color: #EFFCF4; }
-=======
-  background: #EFFCF4; }
->>>>>>> 873e6a5c794f6ecf53dad2320d7dfc1a827b36fc
 
 .body {
   margin: 2em; }
@@ -100,7 +96,9 @@ ul {
   display: flex;
   flex-direction: column; }
 
-.create-post input, .create-post textarea, .create-post button {
+.create-post input,
+.create-post textarea,
+.create-post button {
   padding: 1em;
   border-radius: 0.5em;
   margin-bottom: 1em;
@@ -108,7 +106,8 @@ ul {
   color: inherit;
   border: 0; }
 
-.create-post input, .create-post textarea {
+.create-post input,
+.create-post textarea {
   border: 1px solid grey; }
 
 .create-post textarea {
@@ -148,7 +147,9 @@ ul {
   display: flex;
   flex-direction: column; }
 
-.edit-post input, .edit-post textarea, .edit-post button {
+.edit-post input,
+.edit-post textarea,
+.edit-post button {
   padding: 1em;
   border-radius: 0.5em;
   margin-bottom: 1em;
@@ -156,7 +157,8 @@ ul {
   color: inherit;
   border: 0; }
 
-.edit-post input, .edit-post textarea {
+.edit-post input,
+.edit-post textarea {
   border: 1px solid grey; }
 
 .edit-post textarea {
