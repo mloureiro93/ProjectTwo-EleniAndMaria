@@ -4,7 +4,12 @@
   <button>Find out where your next Adventure begins</button>
 </form>
 
+{{#if city}}
 {{city.city_name}}
+<a href="/day1/{{city._id}}">Go to itinerary</a>
+{{/if}}
+
+
 
 {{#if errorMessage}}
 <div class="error-message">{{ errorMessage }}</div>

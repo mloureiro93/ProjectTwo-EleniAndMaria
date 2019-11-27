@@ -28,9 +28,6 @@ router.get("/userprofile", (req, res, next) => {
 });
 
 
-
-
-
 //routes for selectionPage
 router.get("/tripSelection", (req, res, next) => {
   res.render("Itinerary/tripSelection");
@@ -40,12 +37,31 @@ router.post("/tripSelection", (req, res, next) => {
   const city = req.body.travelingFrom;
   let filteredArray;
   Poi.find({}).then(cities => {
-    console.log(cities);
     filteredArray = cities.filter(item => item.city_name !== city);
     const randomCity = filteredArray[randomIndex(filteredArray)];
-    res.redirect("/day1/" + randomCity._id);
+    res.redirect("/tripSelection/" + randomCity._id);
   });
 });
+
+router.get("/tripSelection/:id", (req, res, next) => {
+  const cityId = req.params.id;
+  // TODO: GET THE VALUE OF "id", SEARCH IT IN YOUR DATABASE AND SEND IT TO YOUR VIEW5
+  Poi.findById(cityId)
+    .then(city => {
+      res.render("Itinerary/tripSelection", {
+        city
+      });
+    });
+});
+
+// router.post("/tripSelection/:id", (req, res, next) => {
+//   const cityId = req.params.id;
+//   // TODO: GET THE VALUE OF "id", SEARCH IT IN YOUR DATABASE AND SEND IT TO YOUR VIEW5
+//   Poi.findById(cityId)
+//     .then(city => {
+//       res.redirect("/day1/" + city._id);
+//     });
+// });
 
 //Routes for Itinerary (Day1 & Day2)
 
