@@ -9,4 +9,14 @@ a {
 ul {
   list-style-type: none; }
 
+.login-container {
+  height: 100vh;
+  widows: 100%; }
+
+.login-form {
+  max-width: 100%;
+  width: 370px;
+  padding: 15px;
+  margin: auto; }
+
 /*# sourceMappingURL=style.css.map */
