@@ -6,10 +6,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-sans;
+  background:#EFFCF4;
+  
+  
 }
 
 .body {
   margin: 2em;
+  
 }
 
 //Navbar styling
@@ -105,6 +109,7 @@ ul {
     margin-bottom: 15px;
     background: #556b2f;
     border-color: #556b2f;
+   
     color: cornsilk;
   }
   .btn-custom:hover {
@@ -114,6 +119,124 @@ ul {
     color: cornsilk;
   }
 }
+
+//User Profile
+
+
+
+.user-profile {
+  .btn-custom{
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+  .btn-custom:hover {
+    background:#AFE1C3;
+    border-color:#AFE1C3;
+  }
+
+}
+
+//posts styling
+.create-post{
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,textarea,button {
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  font: inherit;
+  color: inherit;
+  border: 0;
+}
+
+input,textarea {
+  border: 1px solid grey;
+}
+
+textarea {
+  min-height: 8em;
+  resize: vertical;
+}
+
+.btn-custom{
+  margin-bottom: 15px;
+  background: #93CFAB;
+  border-color: #93CFAB;
+}
+.btn-custom:hover {
+  background:#AFE1C3;
+  border-color:#AFE1C3;
+}
+}
+
+.single-post {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+  background-color: white;
+  // box-shadow: 0 0.25em 0.75em -0.25em $grey;
+  img {
+    margin-bottom: 1em;
+    max-width: 30%;
+  width: 30%;
+  }
+}
+
+.partial{
+  .btn-custom{
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+  .btn-custom:hover {
+    background:#AFE1C3;
+    border-color:#AFE1C3;
+
+}
+}
+
+.edit-post{
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,textarea,button {
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font: inherit;
+    color: inherit;
+    border: 0;
+  }
+  
+  input,textarea {
+    border: 1px solid grey;
+  }
+  
+  textarea {
+    min-height: 8em;
+    resize: vertical;
+  }
+  
+  .btn-custom{
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+  .btn-custom:hover {
+    background:#AFE1C3;
+    border-color:#AFE1C3;
+  }
+
+}
+
 
 .navbar-dark .navbar-nav .nav-link {
   color: $primary;
