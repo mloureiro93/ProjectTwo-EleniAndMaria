@@ -7,23 +7,23 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
     integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-  <link rel="stylesheet" href="/styles/style.css" />  
-  <link href=“https://fonts.googleapis.com/css?family=Baskervville|Lora&display=swap” rel=“stylesheet”>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar container-fluid justify-content-end navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar container-fluid navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
         alt="">
-      2 DaysAway
+      Two Days Away
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+      <ul class="navbar-nav">
         {{!-- <nav class="nav container-fluid navbar-dark bg-dark justify-content-end"> --}}
 
         <li class="nav-item">
@@ -38,7 +38,7 @@
         </li>
         <li class="nav-item">
           <form action="/sign-out" method="POST">
-            <button class="btn btn-outline-primary">Logout</button>
+            <button class="btn btn-outline-primary myBtn ">Logout</button>
           </form>
         </li>
         {{else}}
@@ -72,8 +72,10 @@
 
 
   </nav> --}}
-
-  {{{body}}}
+  <div class="body">
+    <!-- Content here -->
+    {{{body}}}
+  </div>
 
 
 

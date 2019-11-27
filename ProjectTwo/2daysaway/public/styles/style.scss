@@ -1,30 +1,151 @@
-$font-sans: 'Baskervville',
-serif;
-$link-color: white;
+$font-sans: "Baskervville", serif;
+$primary: ghostwhite;
 
+//Layout styling
 body {
   margin: 0;
   padding: 0;
   font-family: $font-sans;
 }
 
-a {
-  color: $link-color;
+.body {
+  margin: 2em;
 }
 
+//Navbar styling
 ul {
   list-style-type: none;
 }
 
-.login-container {
-  height: 100vh ;
-  widows: 100%;
+//Login Styling
+
+#login-background {
+  background: url("../images/amadeusz-misiak-oXQT32eAMGE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  // width: 100%;
+  height: 100vh;
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+  }
+  .login-form input {
+    margin: 5px;
+  }
+  .login-form h1{
+    font-weight: 900;
+  }
+  .login-form a {
+    text-decoration: none;
+    color: cornsilk;
+  }
+  .login-form p {
+    color: beige;
+  }
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+    color: cornsilk;
+  }
+  .btn-custom:hover {
+    background: green;
+  }
 }
 
-.login-form{
-  max-width: 100%;
-  width: 370px;
-  padding: 15px;
-  margin: auto;
+//Sign.up Styling
 
+#signup-background {
+  background: url("../images/marc-zimmer-kEP-zO-w4nE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+  }
+
+  .signup-container input {
+    margin: 8px;
+  }
+
+  .signup-container h1 {
+    margin-top: 45px;
+    color: cornsilk;
+    font-weight: 900;
+  }
+
+  .signup-container a {
+    text-decoration: none;
+    color: cornsilk;
+  }
+  .signup-container p {
+    color: beige;
+  }
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+    color: cornsilk;
+  }
+  .btn-custom:hover {
+    background: green;
+  }
+  .error-message{
+    color: cornsilk;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $primary;
+}
+
+.myBtn {
+  color: $primary;
+  border-color: $primary;
+}
+
+//Day1 styling
+
+@media (max-width: 767px) {
+  .column-1,
+  .column-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .column-1 {
+    width: 50%;
+  }
+
+  .column-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .column-2,
+  .column-1 {
+    width: 33%;
+  }
 }
