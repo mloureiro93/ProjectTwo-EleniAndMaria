@@ -6,12 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>{{title}}</title>
   <link rel="stylesheet" href="/styles/style.css" />
+<<<<<<< HEAD
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
     integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+=======
+  <link href="https://fonts.googleapis.com/css?family=Baskervville|Lora&display=swap" rel="stylesheet">
+>>>>>>> a10096ba5b3344eee4e0594a15a2bd44ad70fadb
 </head>
 
 <body>
-  <nav>
+  <nav class="navbar container-fluid justify-content-end navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
+        alt="">
+      2 DaysAway
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        {{!-- <nav class="nav container-fluid navbar-dark bg-dark justify-content-end"> --}}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/reviews">Reviews</a>
+        </li>
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/userprofile">{{this.user.username}}'s Profile</a>
+        </li>
+        <li class="nav-item">
+          <form action="/sign-out" method="POST">
+            <button class="btn btn-outline-primary">Logout</button>
+          </form>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-up">Sign Up</a>
+        </li>
+
+        {{/if}}
+        {{!-- </nav> --}}
+      </ul>
+    </div>
+  </nav>
+  {{!-- </div> --}}
+
+
+  {{!-- <nav>
     <a href="/">Home</a>
     <a href="/post/reviews">Reviews</a>
 
@@ -24,15 +73,20 @@
     <a href="/sign-up">Sign Up</a>
     {{/if}}
 
+<<<<<<< HEAD
   </nav>
 
 
 
 
+=======
+  </nav> --}}
+>>>>>>> a10096ba5b3344eee4e0594a15a2bd44ad70fadb
   {{{body}}}
 
 
 
+<<<<<<< HEAD
 
 
   <footer>
@@ -40,6 +94,13 @@
     <a href="/userprofile">{{this.user.username}}'s Profile</a>
     {{/if}}
   </footer>
+=======
+  {{!-- <footer>
+    {{#if user}}
+    <a href="/userprofile">{{this.user.username}}'s Profile</a>
+    {{/if}}
+  </footer> --}}
+>>>>>>> a10096ba5b3344eee4e0594a15a2bd44ad70fadb
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

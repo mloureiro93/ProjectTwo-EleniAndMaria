@@ -1,12 +1,17 @@
-$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$link-color: #00b7ff;
+$font-sans: 'Baskervville',
+serif;
+$link-color: white;
 
 body {
   margin: 0;
-  padding: 50px;
+  padding: 0;
   font-family: $font-sans;
 }
 
 a {
   color: $link-color;
+}
+
+ul {
+  list-style-type: none;
 }
