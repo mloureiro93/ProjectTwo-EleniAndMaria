@@ -1,6 +1,4 @@
-const {
-  Router
-} = require("express");
+const { Router } = require("express");
 const router = new Router();
 
 function randomIndex(array) {
@@ -27,10 +25,6 @@ router.get("/userprofile", (req, res, next) => {
   res.render("user");
 });
 
-
-
-
-
 //routes for selectionPage
 router.get("/tripSelection", (req, res, next) => {
   res.render("Itinerary/tripSelection");
@@ -38,6 +32,7 @@ router.get("/tripSelection", (req, res, next) => {
 
 router.post("/tripSelection", (req, res, next) => {
   const city = req.body.travelingFrom;
+  console.log("NOTICEEEE ME", city);
   let filteredArray;
   Poi.find({}).then(cities => {
     console.log(cities);

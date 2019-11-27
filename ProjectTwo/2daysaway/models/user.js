@@ -13,7 +13,9 @@ const generateId = length => {
 const schema = new mongoose.Schema({
   username: {
     type: String,
-    trim: true
+    trim: true,
+    required: true
+    
   },
   email: {
     type: String,
