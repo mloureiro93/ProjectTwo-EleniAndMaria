@@ -1,4 +1,4 @@
-$font-sans: 'Baskervville',
+$font-sans: "Baskervville",
 serif;
 $primary: ghostwhite;
 // #93CFAB #EFFCF4;
@@ -16,13 +16,251 @@ body {
 
 .body {
   margin: 2em;
-
 }
 
 //Navbar styling
 ul {
   list-style-type: none;
 }
+
+//Login Styling
+
+#login-background {
+  background: url("../images/amadeusz-misiak-oXQT32eAMGE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  // width: 100%;
+  height: 100vh;
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+  }
+
+  .login-form input {
+    margin: 5px;
+  }
+
+  .login-form h1 {
+    font-weight: 900;
+  }
+
+  .login-form a {
+    text-decoration: none;
+    color: cornsilk;
+  }
+
+  .login-form p {
+    color: beige;
+  }
+
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+    color: cornsilk;
+  }
+
+  .btn-custom:hover {
+    background: green;
+  }
+}
+
+//Sign.up Styling
+
+#signup-background {
+  background: url("../images/marc-zimmer-kEP-zO-w4nE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+  }
+
+  .signup-container input {
+    margin: 8px;
+  }
+
+  .signup-container h1 {
+    margin-top: 45px;
+    color: cornsilk;
+    font-weight: 900;
+  }
+
+  .signup-container a {
+    text-decoration: none;
+    color: cornsilk;
+  }
+
+  .signup-container p {
+    color: beige;
+  }
+
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+
+    color: cornsilk;
+  }
+
+  .btn-custom:hover {
+    background: green;
+  }
+
+  .error-message {
+    color: cornsilk;
+  }
+}
+
+//User Profile
+
+
+
+.user-profile {
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+
+  .btn-custom:hover {
+    background: #AFE1C3;
+    border-color: #AFE1C3;
+  }
+
+}
+
+//posts styling
+.create-post {
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea,
+  button {
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font: inherit;
+    color: inherit;
+    border: 0;
+  }
+
+  input,
+  textarea {
+    border: 1px solid grey;
+  }
+
+  textarea {
+    min-height: 8em;
+    resize: vertical;
+  }
+
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+
+  .btn-custom:hover {
+    background: #AFE1C3;
+    border-color: #AFE1C3;
+  }
+}
+
+.single-post {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+  background-color: white;
+
+  // box-shadow: 0 0.25em 0.75em -0.25em $grey;
+  img {
+    margin-bottom: 1em;
+    max-width: 30%;
+    width: 30%;
+  }
+}
+
+.partial {
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+
+  .btn-custom:hover {
+    background: #AFE1C3;
+    border-color: #AFE1C3;
+
+  }
+}
+
+.edit-post {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea,
+  button {
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font: inherit;
+    color: inherit;
+    border: 0;
+  }
+
+  input,
+  textarea {
+    border: 1px solid grey;
+  }
+
+  textarea {
+    min-height: 8em;
+    resize: vertical;
+  }
+
+  .btn-custom {
+    margin-bottom: 15px;
+    background: #93CFAB;
+    border-color: #93CFAB;
+  }
+
+  .btn-custom:hover {
+    background: #AFE1C3;
+    border-color: #AFE1C3;
+  }
+
+}
+
 
 .navbar-dark .navbar-nav .nav-link {
   color: $primary;

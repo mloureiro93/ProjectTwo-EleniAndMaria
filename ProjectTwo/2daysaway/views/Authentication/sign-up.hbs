@@ -1,4 +1,4 @@
-<form action="/sign-up" method="POST">
+{{!-- <form action="/sign-up" method="POST">
   <label for="input-username">Username</label>
   <input type="text" id="input-username" name="username" placeholder="Your Username" />
   <label for="input-email">Email</label>
@@ -10,4 +10,42 @@
 
 {{#if errorMessage}}
   <div class="error-message">{{ errorMessage }}</div>
-{{/if}}
+{{/if}} --}}
+
+<body id="signup-background">
+
+
+  <div class="container-fluid">
+
+
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <form class=" form-container signup-container text-center " action="/sign-up" method="POST">
+          <h1 class="mb-5 text-uppercase">Sign-Up</h1>
+          <div class="form-group ">
+            <div>
+              <input type="text" class="form-control" id="input-username" name="username" placeholder="Your Username" />
+            </div>
+            <div>
+              <input type="email" class="form-control" id="input-email" name="email" placeholder="Your Email" /> 
+            </div>
+            <div>
+              <input type="password" class="form-control" name="password" id="input-password" placeholder="Password" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-custom btn-block">Sign-Up</button>
+        {{#if errorMessage}}
+        <div class="error-message">{{ errorMessage }}</div>
+        {{/if}}
+         
+          </form>
+
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12"></div>
+
+    </div>
+  </div>
+
+  </div>

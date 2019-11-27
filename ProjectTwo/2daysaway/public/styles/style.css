@@ -2,14 +2,175 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Baskervville", serif;
+<<<<<<< HEAD
   color: #2C342F;
   background-color: #EFFCF4; }
+=======
+  background: #EFFCF4; }
+>>>>>>> 873e6a5c794f6ecf53dad2320d7dfc1a827b36fc
 
 .body {
   margin: 2em; }
 
 ul {
   list-style-type: none; }
+
+#login-background {
+  background: url("../images/amadeusz-misiak-oXQT32eAMGE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+  #login-background .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75); }
+  #login-background .login-form input {
+    margin: 5px; }
+  #login-background .login-form h1 {
+    font-weight: 900; }
+  #login-background .login-form a {
+    text-decoration: none;
+    color: cornsilk; }
+  #login-background .login-form p {
+    color: beige; }
+  #login-background .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+    color: cornsilk; }
+  #login-background .btn-custom:hover {
+    background: green; }
+
+#signup-background {
+  background: url("../images/marc-zimmer-kEP-zO-w4nE-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+  #signup-background .signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid;
+    max-width: 100%;
+    width: 370px;
+    padding: 30px 40px;
+    margin-top: 12vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75); }
+  #signup-background .signup-container input {
+    margin: 8px; }
+  #signup-background .signup-container h1 {
+    margin-top: 45px;
+    color: cornsilk;
+    font-weight: 900; }
+  #signup-background .signup-container a {
+    text-decoration: none;
+    color: cornsilk; }
+  #signup-background .signup-container p {
+    color: beige; }
+  #signup-background .btn-custom {
+    margin-bottom: 15px;
+    background: #556b2f;
+    border-color: #556b2f;
+    color: cornsilk; }
+  #signup-background .btn-custom:hover {
+    background: green; }
+  #signup-background .error-message {
+    color: cornsilk; }
+
+.user-profile .btn-custom {
+  margin-bottom: 15px;
+  background: #93CFAB;
+  border-color: #93CFAB; }
+
+.user-profile .btn-custom:hover {
+  background: #AFE1C3;
+  border-color: #AFE1C3; }
+
+.create-post form {
+  display: flex;
+  flex-direction: column; }
+
+.create-post input, .create-post textarea, .create-post button {
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  font: inherit;
+  color: inherit;
+  border: 0; }
+
+.create-post input, .create-post textarea {
+  border: 1px solid grey; }
+
+.create-post textarea {
+  min-height: 8em;
+  resize: vertical; }
+
+.create-post .btn-custom {
+  margin-bottom: 15px;
+  background: #93CFAB;
+  border-color: #93CFAB; }
+
+.create-post .btn-custom:hover {
+  background: #AFE1C3;
+  border-color: #AFE1C3; }
+
+.single-post {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+  background-color: white; }
+  .single-post img {
+    margin-bottom: 1em;
+    max-width: 30%;
+    width: 30%; }
+
+.partial .btn-custom {
+  margin-bottom: 15px;
+  background: #93CFAB;
+  border-color: #93CFAB; }
+
+.partial .btn-custom:hover {
+  background: #AFE1C3;
+  border-color: #AFE1C3; }
+
+.edit-post form {
+  display: flex;
+  flex-direction: column; }
+
+.edit-post input, .edit-post textarea, .edit-post button {
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  font: inherit;
+  color: inherit;
+  border: 0; }
+
+.edit-post input, .edit-post textarea {
+  border: 1px solid grey; }
+
+.edit-post textarea {
+  min-height: 8em;
+  resize: vertical; }
+
+.edit-post .btn-custom {
+  margin-bottom: 15px;
+  background: #93CFAB;
+  border-color: #93CFAB; }
+
+.edit-post .btn-custom:hover {
+  background: #AFE1C3;
+  border-color: #AFE1C3; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: ghostwhite; }
