@@ -1,16 +1,22 @@
 $font-sans: 'Baskervville',
 serif;
 $primary: ghostwhite;
+// #93CFAB #EFFCF4;
+// #AFE1C3 
 
 //Layout styling
+
 body {
   margin: 0;
   padding: 0;
   font-family: $font-sans;
+  color: #2C342F;
+  background-color: #EFFCF4;
 }
 
 .body {
   margin: 2em;
+
 }
 
 //Navbar styling
@@ -24,10 +30,56 @@ ul {
 
 .myBtn {
   color: $primary;
-  border-color: $primary
+  border-color: $primary;
+
+}
+
+.myBtn:hover {
+  background: #AFE1C3;
+  border-color: #93CFAB;
+
 }
 
 //Day1 styling
+
+.row {
+  padding: 1em 0;
+}
+
+.view {
+  display: flex;
+  align-content: center;
+  height: 15.5em;
+  background-color: black;
+}
+
+.last-link {
+  display: flex;
+  align-content: center;
+}
+
+.last-link a {
+  margin: 0 auto;
+}
+
+.container-fluid {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  text-align: center;
+  margin: 0 1.5rem;
+  text-shadow: 1px 1px grey;
+
+}
+
+.day {
+  font-weight: bold;
+}
+
+// .card-body {
+//   background-color: rgba(218, 223, 225, 1);
+// }
 
 @media (max-width: 767px) {
 
@@ -37,17 +89,18 @@ ul {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .column-1 {
-    width: 50%;
-  }
 
-  .column-2 {
-    width: 100%;
-  }
-}
+// @media (min-width: 768px) and (max-width: 991px) {
+//   .column-1 {
+//     width: 50%;
+//   }
 
-@media (min-width: 992px) {
+//   .column-2 {
+//     width: 100%;
+//   }
+// }
+
+@media (min-width: 768px) {
 
   .column-2,
   .column-1 {
