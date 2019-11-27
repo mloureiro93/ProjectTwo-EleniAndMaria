@@ -7,6 +7,7 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baskervville|Lora&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,38 +15,41 @@
     <a class="navbar-brand" href="#">
       <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
         alt="">
-      Bootstrap
+      2 DaysAway
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto"></ul>
-      {{!-- <nav class="nav container-fluid navbar-dark bg-dark justify-content-end"> --}}
+      <ul class="navbar-nav mr-auto">
+        {{!-- <nav class="nav container-fluid navbar-dark bg-dark justify-content-end"> --}}
 
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/post/reviews">Reviews</a>
-      </li>
-      {{#if user}}
-      <li class="nav-item">
-        <form action="/sign-out" method="POST">
-          <button class="btn btn-outline-primary">Logout</button>
-        </form>
-      </li>
-      {{else}}
-      <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/sign-up">Sign Up</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/reviews">Reviews</a>
+        </li>
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/userprofile">{{this.user.username}}'s Profile</a>
+        </li>
+        <li class="nav-item">
+          <form action="/sign-out" method="POST">
+            <button class="btn btn-outline-primary">Logout</button>
+          </form>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-up">Sign Up</a>
+        </li>
 
-      {{/if}}
-      {{!-- </nav> --}}
+        {{/if}}
+        {{!-- </nav> --}}
       </ul>
     </div>
   </nav>
@@ -70,11 +74,11 @@
 
 
 
-  <footer>
+  {{!-- <footer>
     {{#if user}}
     <a href="/userprofile">{{this.user.username}}'s Profile</a>
     {{/if}}
-  </footer>
+  </footer> --}}
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

@@ -1,9 +1,6 @@
-$font-sans: "Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-$link-color: #00b7ff;
-$primary: purple;
+$font-sans: 'Baskervville',
+serif;
+$link-color: white;
 
 body {
   margin: 0;
@@ -13,4 +10,8 @@ body {
 
 a {
   color: $link-color;
+}
+
+ul {
+  list-style-type: none;
 }
