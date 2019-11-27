@@ -3,10 +3,33 @@ body {
   padding: 0;
   font-family: "Baskervville", serif; }
 
-a {
-  color: white; }
+.body {
+  margin: 2em; }
 
 ul {
   list-style-type: none; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: ghostwhite; }
+
+.myBtn {
+  color: ghostwhite;
+  border-color: ghostwhite; }
+
+@media (max-width: 767px) {
+  .column-1,
+  .column-2 {
+    width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .column-1 {
+    width: 50%; }
+  .column-2 {
+    width: 100%; } }
+
+@media (min-width: 992px) {
+  .column-2,
+  .column-1 {
+    width: 33%; } }
 
 /*# sourceMappingURL=style.css.map */
