@@ -5,7 +5,7 @@
       <input type="text" id="input-travelingFrom" name="travelingFrom" placeholder="Enter the city of your departure" />
       <button class="btn btn-custom">Find out where your next Adventure begins</button>
       {{#if city}}
-      {{city.city_name}}
+      <strong> {{city.city_name}}</strong>
       <a class="btn-itinerary" href="/day1/{{city._id}}">Go to itinerary</a>
       {{/if}}
     </form>

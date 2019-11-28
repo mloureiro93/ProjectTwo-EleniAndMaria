@@ -273,9 +273,18 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     width: 30em;
+    padding: 2em;
     margin: 8em auto;
+  }
+  strong{
+    font-size: 2em;
+    text-shadow: 1px 1px #93cfab;
+  }
+
+  label{
+    font-weight: 700;
   }
 
   #input-travelingFrom {
@@ -299,9 +308,13 @@ ul {
 
   .btn-itinerary {
     margin: 20px;
-    margin-bottom: 15px;
+    padding: 0.5em;
+    border-radius: 0.25em;
     background: #93cfab;
     border-color: #93cfab;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
   }
 
   .btn-itinerary:hover {
