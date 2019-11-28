@@ -251,16 +251,15 @@ ul {
 .day {
   font-weight: bold; }
 
+#homepage-background {
+  margin: 0 0; }
+
 #carouselExampleSlidesOnly {
-  border: 5px solid #2c342f;
-  border-radius: 8px;
-  width: 50%; }
+  width: 100%vw; }
 
 @media (max-width: 767px) {
   .column-1,
   .column-2 {
-    width: 100%; }
-  #carouselExampleSlidesOnly {
     width: 100%; } }
 
 @media (min-width: 768px) {

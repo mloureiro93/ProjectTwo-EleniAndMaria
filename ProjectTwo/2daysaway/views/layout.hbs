@@ -24,10 +24,11 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
       <ul class="navbar-nav">
-        {{!-- <nav class="nav container-fluid navbar-dark bg-dark justify-content-end"> --}}
-
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/post/reviews">Reviews</a>
@@ -48,42 +49,13 @@
         <li class="nav-item">
           <a class="nav-link" href="/sign-up">Sign Up</a>
         </li>
-
         {{/if}}
-        {{!-- </nav> --}}
       </ul>
     </div>
   </nav>
-  {{!-- </div> --}}
-
-
-  {{!-- <nav>
-    <a href="/">Home</a>
-    <a href="/post/reviews">Reviews</a>
-
-    {{#if user}}
-    <form action="/sign-out" method="POST">
-      <button>Logout</button>
-    </form>
-    {{else}}
-    <a href="/login">Login</a>
-    <a href="/sign-up">Sign Up</a>
-    {{/if}}
-
-
-  </nav> --}}
   <div class="body">
-    <!-- Content here -->
     {{{body}}}
   </div>
-
-
-
-
-
-  <footer>
-
-  </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
