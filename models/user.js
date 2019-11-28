@@ -34,6 +34,11 @@ const schema = new mongoose.Schema({
   confirmationCode: {
     type: String,
     default: generateId(30)
+  },
+  destination:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'Poi'
+    
   }
 });
 
