@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const Poi = require('../models/POI');
 const data = require('./data');
@@ -182,14 +184,13 @@ const cities = [{
 ];
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/2daysaway-database", {
+  .connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  });
-
-
-
-Poi.create(cities)
+  })
+  .then(() => {
+    return Poi.create(cities);
+  })
   .then(() => mongoose.connection.close())
   .catch(err => {
     console.error('Error connecting to mongo', err);

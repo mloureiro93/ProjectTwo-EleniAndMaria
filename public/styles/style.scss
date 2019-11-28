@@ -388,9 +388,26 @@ ul {
 
   #dark-background-image {
     font-weight: 900;
-    color: white;
-    text-shadow: 2px 2px lightgrey;
+    color: bisque;
+    text-shadow: 2px 2px #2c342f;
+  }
 
+  .homepage-link {
+    // margin: 20px;
+    // margin-bottom: 15px;
+    background: #93cfab;
+    border-color: #93cfab;
+    border-radius: 0.25em;
+    text-decoration: none;
+    color: #2c342f;
+    font-weight: bold;
+    padding: 0.5em;
+    position: absolute;
+  }
+
+  .homepage-link:hover {
+    background: #afe1c3;
+    border-color: #afe1c3;
   }
 
 
@@ -434,6 +451,7 @@ ul {
     margin-bottom: 15px;
     background: #93cfab;
     border-color: #93cfab;
+
   }
 
   .btn-custom:hover {

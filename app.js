@@ -1,4 +1,6 @@
-const { join } = require("path");
+const {
+  join
+} = require("path");
 const express = require("express");
 const createError = require("http-errors");
 const cookieParser = require("cookie-parser");
@@ -36,9 +38,9 @@ app.use(
   sassMiddleware({
     src: join(__dirname, "public"),
     dest: join(__dirname, "public"),
-    outputStyle:
-      process.env.NODE_ENV === "development" ? "nested" : "compressed",
-    sourceMap: true
+    outputStyle: process.env.NODE_ENV === "development" ? "nested" : "compressed",
+    sourceMap: true,
+    force: process.env.NODE_ENV === 'development'
   })
 );
 app.use(express.static(join(__dirname, "public")));
