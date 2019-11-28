@@ -24,13 +24,6 @@ hbs.registerPartials(join(__dirname, "views/partials"));
 app.set("views", join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.use(logger("dev"));
-app.use(
-  express.urlencoded({
-    extended: true
-  })
-);
-app.use(cookieParser());
 app.use(serveFavicon(join(__dirname, "public/images", "favicon.ico")));
 app.use(
   sassMiddleware({
@@ -43,8 +36,14 @@ app.use(
 );
 app.use(express.static(join(__dirname, "public")));
 
-app.use(cookieParser());
+app.use(logger("dev"));
 
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
+app.use(cookieParser());
 app.use(
   expressSession({
     secret: process.env.SESSION_SECRET,
@@ -52,7 +51,7 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 60 * 60 * 24 * 15,
-      sameSite: true,
+      sameSite: "lax",
       httpOnly: true,
       secure: process.env.NODE_ENV !== "development"
     },
@@ -92,6 +91,7 @@ app.use((req, res, next) => {
 
 // Catch all error handler
 app.use((error, req, res, next) => {
+  console.log(error.message);
   // Set error information, with stack only available in development
   res.locals.message = error.message;
   res.locals.error = req.app.get("env") === "development" ? error : {};
