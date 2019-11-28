@@ -1,4 +1,5 @@
-$font-sans: "Baskervville", serif;
+$font-sans: "Baskervville",
+serif;
 $primary: ghostwhite;
 // #93CFAB #EFFCF4;
 // #AFE1C3
@@ -57,13 +58,13 @@ ul {
   .login-form a {
     text-decoration: none;
     color: cornsilk;
-    
+
   }
 
   .login-form p {
     color: beige;
-   
-    text-decoration-color:#93cfab ;
+
+    text-decoration-color: #93cfab;
   }
 
   .btn-custom {
@@ -267,22 +268,25 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+
   form {
     display: flex;
-       flex-direction: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: white;
     width: 30em;
     margin: 8em auto;
-    
+
   }
+
   #input-travelingFrom {
     margin: 10px;
     min-height: 3em;
     resize: vertical;
     width: 15em;
   }
+
   .btn-custom {
     margin: 20px;
     margin-bottom: 15px;
@@ -301,6 +305,7 @@ ul {
     background: #93cfab;
     border-color: #93cfab;
   }
+
   .btn-itinerary:hover {
     background: #afe1c3;
     border-color: #afe1c3;
@@ -361,9 +366,23 @@ ul {
 //   background-color: rgba(218, 223, 225, 1);
 // }
 
+//carousel homepage
+
+#carouselExampleSlidesOnly {
+  border: 5px solid #2c342f;
+  border-radius: 8px;
+
+  width: 50%;
+}
+
 @media (max-width: 767px) {
+
   .column-1,
   .column-2 {
+    width: 100%;
+  }
+
+  #carouselExampleSlidesOnly {
     width: 100%;
   }
 }
@@ -379,6 +398,7 @@ ul {
 // }
 
 @media (min-width: 768px) {
+
   .column-2,
   .column-1 {
     width: 33%;
