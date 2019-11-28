@@ -251,14 +251,31 @@ ul {
 .day {
   font-weight: bold; }
 
+#carouselExampleSlidesOnly {
+  border: 5px solid #2c342f;
+  border-radius: 8px;
+  width: 50%; }
+
 @media (max-width: 767px) {
   .column-1,
   .column-2 {
+    width: 100%; }
+  #carouselExampleSlidesOnly {
     width: 100%; } }
 
 @media (min-width: 768px) {
   .column-2,
   .column-1 {
     width: 33%; } }
+
+.jumbotron .btn-custom {
+  margin: 20px;
+  margin-bottom: 15px;
+  background: #93cfab;
+  border-color: #93cfab; }
+
+.jumbotron .btn-custom:hover {
+  background: #afe1c3;
+  border-color: #afe1c3; }
 
 /*# sourceMappingURL=style.css.map */

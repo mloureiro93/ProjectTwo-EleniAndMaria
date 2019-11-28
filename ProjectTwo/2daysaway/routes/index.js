@@ -89,4 +89,8 @@ router.get("/day2/:id", (req, res, next) => {
   });
 });
 
+router.get("/about", (req, res, next) => {
+  res.render("about");
+});
+
 module.exports = router;
