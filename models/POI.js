@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const poiSchema = new mongoose.Schema({
-  _id: String,
+  // _id: String,
   city_name: String,
   city_description: String,
   country: String,

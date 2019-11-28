@@ -286,12 +286,13 @@ ul {
     padding: 2em;
     margin: 8em auto;
   }
-  strong{
+
+  strong {
     font-size: 2em;
     text-shadow: 1px 1px #93cfab;
   }
 
-  label{
+  label {
     font-weight: 700;
   }
 
@@ -347,6 +348,8 @@ ul {
 
 //Day1 styling
 .ItineraryDay {
+  margin-bottom: 2em;
+
   .row {
     padding: 1em 0;
   }
@@ -365,7 +368,21 @@ ul {
 
   .last-link a {
     margin: 0 auto;
+    background: #93cfab;
+    border-color: #93cfab;
+    border-radius: 0.25em;
+    text-decoration: none;
+    color: #2c342f;
+    font-weight: bold;
+    padding: 0.5em;
+
   }
+
+  .last-link:hover a {
+    background: #afe1c3;
+    border-color: #afe1c3;
+  }
+
 
   .container-fluid {
     margin-bottom: 2.5rem;
@@ -388,10 +405,13 @@ ul {
 
 //carousel homepage
 
+
 #homepage-background {
   margin: 0 0;
 
-
+  // .nav {
+  //   padding: 
+  // }
   .carousel-caption {
     top: 0;
     bottom: auto;

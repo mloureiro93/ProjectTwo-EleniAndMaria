@@ -7,7 +7,7 @@ const URI = process.env.MONGODB_URI;
 
 
 const cities = [{
-    _id: "1",
+    // _id: "1",
     city_name: "Copenhagen",
     city_description: "The premier capital of Northern Europe is Scandinavia's most fantastic city and the center of the most dynamic region in Europe, the Øresund Region. The city is one of Europe's oldest capitals with an exclusive royal touch - the monarchy in Denmark is the oldest in the world. Here you’ll find your full itinerary for your weekend getaway in the beautiful city of Copenhagen!",
     country: "Denmark",
@@ -92,7 +92,7 @@ const cities = [{
     ]
   },
   {
-    _id: "2",
+    // _id: "2",
     city_name: "Amsterdam",
     city_description: "Amsterdam is colloquially known as Venice of the North because of its lovely canals that criss-cross the city, its impressive architecture and more than 1,500 bridges. There is something for every traveller's taste here; whether you prefer culture and history, serious partying, or just the relaxing charm of an old European city.",
     country: "Netherlands",

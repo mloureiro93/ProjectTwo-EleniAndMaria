@@ -25,6 +25,7 @@ router.get("/", (req, res, next) => {
 //user profile
 
 router.get("/userprofile", (req, res, next) => {
+
   res.render("user");
 });
 
@@ -44,7 +45,11 @@ router.post("/tripSelection", (req, res, next) => {
         errorMessage: "Insert your departure point"
       });
     } else {
-      User.findById(req.user.id).populate("Poi").then(user => {
+      User.findByIdAndUpdate(req.user.id, {
+          destination: randomCity._id
+        })
+        .populate("destination")
+        .then(user => {
           console.log(user);
           res.redirect("/tripSelection/" + randomCity._id);
         })
