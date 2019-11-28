@@ -5,6 +5,11 @@ $primary: ghostwhite;
 // #AFE1C3
 
 //Layout styling
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 body {
   margin: 0;
@@ -12,6 +17,7 @@ body {
   font-family: $font-sans;
   color: #2c342f;
   background-color: #effcf4;
+
 }
 
 //.body {
@@ -381,8 +387,10 @@ ul {
 // }
 
 //carousel homepage
+
 #homepage-background {
   margin: 0 0;
+
 
   .carousel-caption {
     top: 0;
@@ -416,9 +424,13 @@ ul {
     text-decoration: none;
     color: #2c342f;
     font-weight: bold;
-    font-size: large;
     padding: 0.5em;
     position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .homepage-link:hover {
@@ -458,6 +470,10 @@ ul {
   .column-2,
   .column-1 {
     width: 33%;
+  }
+
+  .homepage-link {
+    font-size: large;
   }
 }
 

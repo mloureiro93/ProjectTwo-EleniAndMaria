@@ -15,7 +15,7 @@ const schema = new mongoose.Schema({
     type: String,
     trim: true,
     required: true
-    
+
   },
   email: {
     type: String,
@@ -35,10 +35,9 @@ const schema = new mongoose.Schema({
     type: String,
     default: generateId(30)
   },
-  destination:{
-    type:mongoose.Schema.Types.ObjectId,
+  destination: {
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Poi'
-    
   }
 });
 

@@ -46,15 +46,17 @@
           </div>
         </div>
       </div>
+
+      {{#if user}}
+      <a class="homepage-link" href="/tripSelection">Begin your Adventure!</a>
+      {{else}}
+      <a class="homepage-link" href="/login">Find out where your next Adventure begins!</a>
+      {{/if}}
     </div>
+
+
   </div>
 
 
-
-  {{#if user}}
-  <a class="homepage-link" href="/tripSelection">Begin your Adventure!</a>
-  {{else}}
-  <a class="homepage-link" href="/login">Find out where your next Adventure begins!</a>
-  {{/if}}
 
 </body>
