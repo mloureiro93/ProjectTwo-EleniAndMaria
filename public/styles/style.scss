@@ -1,5 +1,4 @@
-$font-sans: "Baskervville",
-serif;
+$font-sans: "Baskervville", serif;
 $primary: ghostwhite;
 // #93CFAB #EFFCF4;
 // #AFE1C3
@@ -9,15 +8,14 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: $font-sans;
   color: #2c342f;
   background-color: #effcf4;
-
 }
 
 //.body {
@@ -282,16 +280,16 @@ ul {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.5);
-    width: 30em;
+    width: calc(30em-4em);
     padding: 2em;
     margin: 8em auto;
   }
-  strong{
+  strong {
     font-size: 2em;
     text-shadow: 1px 1px #93cfab;
   }
 
-  label{
+  label {
     font-weight: 700;
   }
 
@@ -390,7 +388,7 @@ ul {
 
 #homepage-background {
   margin: 0 0;
-
+ 
 
   .carousel-caption {
     top: 0;
@@ -403,6 +401,7 @@ ul {
   .container-fluid {
     margin: 0 0;
     padding: 0 0;
+   
   }
 
   #carouselExampleSlidesOnly {
@@ -437,14 +436,9 @@ ul {
     background: #afe1c3;
     border-color: #afe1c3;
   }
-
-
 }
 
-
-
 @media (max-width: 767px) {
-
   .column-1,
   .column-2 {
     width: 100%;
@@ -466,7 +460,6 @@ ul {
 // }
 
 @media (min-width: 768px) {
-
   .column-2,
   .column-1 {
     width: 33%;
@@ -477,7 +470,7 @@ ul {
   }
 }
 
-.about-background{
+.about-background {
   background: #e9ecef;
 }
 
@@ -487,10 +480,8 @@ ul {
     margin-bottom: 15px;
     background: #93cfab;
     border-color: #93cfab;
-
   }
 
-  
   .btn-custom:hover {
     background: #afe1c3;
     border-color: #afe1c3;
