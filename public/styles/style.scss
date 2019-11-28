@@ -58,7 +58,8 @@ ul {
   }
 
   .login-form h1 {
-    color: black;
+    color: #93cfab;
+    text-shadow: 2px 2px #2c342f;
     font-weight: 900;
   }
 
@@ -498,6 +499,10 @@ ul {
   #signup-background .signup-container {
     margin-top: 29vh;
 
+  }
+
+  #login-background .login-form {
+    margin-top: 16vh;
   }
 
   .signup-container h1 {
