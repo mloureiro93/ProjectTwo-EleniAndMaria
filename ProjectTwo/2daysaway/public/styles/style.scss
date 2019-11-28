@@ -1,5 +1,4 @@
-$font-sans: "Baskervville",
-serif;
+$font-sans: "Baskervville", serif;
 $primary: ghostwhite;
 // #93CFAB #EFFCF4;
 // #AFE1C3
@@ -58,7 +57,6 @@ ul {
   .login-form a {
     text-decoration: none;
     color: cornsilk;
-
   }
 
   .login-form p {
@@ -269,7 +267,7 @@ ul {
   background-repeat: no-repeat;
   height: 100vh;
 
-  form {
+  .tripSelectionForm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,7 +275,6 @@ ul {
     background: white;
     width: 30em;
     margin: 8em auto;
-
   }
 
   #input-travelingFrom {
@@ -370,7 +367,6 @@ ul {
 //carousel homepage
 #homepage-background {
   margin: 0 0;
-
 }
 
 #carouselExampleSlidesOnly {
@@ -386,7 +382,6 @@ ul {
 }
 
 @media (max-width: 767px) {
-
   .column-1,
   .column-2 {
     width: 100%;
@@ -408,7 +403,6 @@ ul {
 // }
 
 @media (min-width: 768px) {
-
   .column-2,
   .column-1 {
     width: 33%;
@@ -427,5 +421,4 @@ ul {
     background: #afe1c3;
     border-color: #afe1c3;
   }
-
 }
