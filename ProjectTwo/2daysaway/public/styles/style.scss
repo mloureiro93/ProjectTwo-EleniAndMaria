@@ -14,9 +14,9 @@ body {
   background-color: #effcf4;
 }
 
-.body {
-  margin: 2em;
-}
+//.body {
+//   margin: 2em;
+// }
 
 //Navbar styling
 ul {
@@ -327,39 +327,40 @@ ul {
 }
 
 //Day1 styling
+.ItineraryDay {
+  .row {
+    padding: 1em 0;
+  }
 
-.row {
-  padding: 1em 0;
-}
+  .view {
+    display: flex;
+    align-content: center;
+    height: 15.5em;
+    background-color: black;
+  }
 
-.view {
-  display: flex;
-  align-content: center;
-  height: 15.5em;
-  background-color: black;
-}
+  .last-link {
+    display: flex;
+    align-content: center;
+  }
 
-.last-link {
-  display: flex;
-  align-content: center;
-}
+  .last-link a {
+    margin: 0 auto;
+  }
 
-.last-link a {
-  margin: 0 auto;
-}
+  .container-fluid {
+    margin-bottom: 2.5rem;
+  }
 
-.container-fluid {
-  margin-bottom: 2.5rem;
-}
+  .title {
+    text-align: center;
+    margin: 0 1.5rem;
+    text-shadow: 1px 1px grey;
+  }
 
-.title {
-  text-align: center;
-  margin: 0 1.5rem;
-  text-shadow: 1px 1px grey;
-}
-
-.day {
-  font-weight: bold;
+  .day {
+    font-weight: bold;
+  }
 }
 
 // .card-body {
@@ -377,6 +378,11 @@ ul {
   // border-radius: 8px;
 
   width: 100%vw;
+}
+
+.container-fluid {
+  margin: 0 0;
+  padding: 0 0;
 }
 
 @media (max-width: 767px) {
@@ -407,4 +413,19 @@ ul {
   .column-1 {
     width: 33%;
   }
+}
+
+.jumbotron {
+  .btn-custom {
+    margin: 20px;
+    margin-bottom: 15px;
+    background: #93cfab;
+    border-color: #93cfab;
+  }
+
+  .btn-custom:hover {
+    background: #afe1c3;
+    border-color: #afe1c3;
+  }
+
 }

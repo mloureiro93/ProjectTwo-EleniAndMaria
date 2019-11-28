@@ -5,9 +5,6 @@ body {
   color: #2c342f;
   background-color: #effcf4; }
 
-.body {
-  margin: 2em; }
-
 ul {
   list-style-type: none; }
 
@@ -224,31 +221,31 @@ ul {
   background: #afe1c3;
   border-color: #93cfab; }
 
-.row {
+.ItineraryDay .row {
   padding: 1em 0; }
 
-.view {
+.ItineraryDay .view {
   display: flex;
   align-content: center;
   height: 15.5em;
   background-color: black; }
 
-.last-link {
+.ItineraryDay .last-link {
   display: flex;
   align-content: center; }
 
-.last-link a {
+.ItineraryDay .last-link a {
   margin: 0 auto; }
 
-.container-fluid {
+.ItineraryDay .container-fluid {
   margin-bottom: 2.5rem; }
 
-.title {
+.ItineraryDay .title {
   text-align: center;
   margin: 0 1.5rem;
   text-shadow: 1px 1px grey; }
 
-.day {
+.ItineraryDay .day {
   font-weight: bold; }
 
 #homepage-background {
@@ -256,6 +253,10 @@ ul {
 
 #carouselExampleSlidesOnly {
   width: 100%vw; }
+
+.container-fluid {
+  margin: 0 0;
+  padding: 0 0; }
 
 @media (max-width: 767px) {
   .column-1,
@@ -266,5 +267,15 @@ ul {
   .column-2,
   .column-1 {
     width: 33%; } }
+
+.jumbotron .btn-custom {
+  margin: 20px;
+  margin-bottom: 15px;
+  background: #93cfab;
+  border-color: #93cfab; }
+
+.jumbotron .btn-custom:hover {
+  background: #afe1c3;
+  border-color: #afe1c3; }
 
 /*# sourceMappingURL=style.css.map */
