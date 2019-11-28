@@ -250,13 +250,17 @@ ul {
 
 #homepage-background {
   margin: 0 0; }
-
-#carouselExampleSlidesOnly {
-  width: 100%vw; }
-
-.container-fluid {
-  margin: 0 0;
-  padding: 0 0; }
+  #homepage-background .carousel-caption {
+    top: 0;
+    bottom: auto;
+    font-weight: 900;
+    color: #2c342f;
+    text-shadow: 2px 2px lightgrey; }
+  #homepage-background .container-fluid {
+    margin: 0 0;
+    padding: 0 0; }
+  #homepage-background #carouselExampleSlidesOnly {
+    width: 100%vw; }
 
 @media (max-width: 767px) {
   .column-1,
