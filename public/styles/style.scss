@@ -5,10 +5,11 @@ $primary: ghostwhite;
 // #AFE1C3
 
 //Layout styling
+
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: 100%vh;
+  width: 100%vw;
   margin: 0;
   padding: 0;
 }
@@ -19,9 +20,10 @@ body {
   background-color: #effcf4;
 }
 
-//.body {
-//   margin: 2em;
-// }
+.nav-item.username {
+  font-weight: bold;
+  color: #93cfab;
+}
 
 //Navbar styling
 ul {
@@ -404,60 +406,56 @@ ul {
 
 //carousel homepage
 
-
-#homepage-background {
+#carouselExampleSlidesOnly {
   margin: 0 0;
+}
 
-  // .nav {
-  //   padding: 
-  // }
+.carousel-inner {
+  height: 93vh;
+}
 
-  .carousel-caption {
-    top: 0;
-    bottom: auto;
-    font-weight: 900;
-    color: #2c342f;
-    text-shadow: 2px 2px lightgrey;
-  }
+.carousel-caption {
+  bottom: 5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px #2c342f;
+}
 
-  .container-fluid {
-    margin: 0 0;
-    padding: 0 0;
+#firstSlide {
+  top: 3em;
+  bottom: auto;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px #2c342f;
+}
 
-  }
+#dark-background-image {
+  font-weight: 1500;
+  color: bisque;
+  text-shadow: 2px 2px #2c342f;
+}
 
-  #carouselExampleSlidesOnly {
-    width: 100%vw;
-  }
+.homepage-link {
+  background: #93cfab;
+  border-color: #93cfab;
+  border-radius: 0.25em;
+  text-decoration: none;
+  color: #2c342f;
+  font-weight: bold;
+  padding: 0.5em;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
 
-  #dark-background-image {
-    font-weight: 900;
-    color: bisque;
-    text-shadow: 2px 2px #2c342f;
-  }
-
-  .homepage-link {
-    // margin: 20px;
-    // margin-bottom: 15px;
-    background: #93cfab;
-    border-color: #93cfab;
-    border-radius: 0.25em;
-    text-decoration: none;
-    color: #2c342f;
-    font-weight: bold;
-    padding: 0.5em;
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: fit-content;
-  }
-
-  .homepage-link:hover {
-    background: #afe1c3;
-    border-color: #afe1c3;
-  }
+.homepage-link:hover {
+  background: #afe1c3;
+  border-color: #afe1c3;
+  text-decoration: none;
+  color: #2c342f;
 }
 
 @media (max-width: 767px) {
@@ -467,9 +465,9 @@ ul {
     width: 100%;
   }
 
-  // #carouselExampleSlidesOnly {
-  //   width: 100%;
-  // }
+  .homepage-link {
+    bottom: 50vh;
+  }
 }
 
 // @media (min-width: 768px) and (max-width: 991px) {
