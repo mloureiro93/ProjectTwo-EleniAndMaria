@@ -8,13 +8,13 @@
       <strong> {{city.city_name}}</strong>
       <a class="btn-itinerary" href="/day1/{{city._id}}">Go to itinerary</a>
       {{/if}}
+    {{#if errorMessage}}
+    <div class="error-message"><strong>{{ errorMessage }}</strong></div>
+    {{/if}}
     </form>
 
 
 
 
-    {{#if errorMessage}}
-    <div class="error-message">{{ errorMessage }}</div>
-    {{/if}}
   </div>
 </body>

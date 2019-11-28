@@ -9,15 +9,14 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: $font-sans;
   color: #2c342f;
   background-color: #effcf4;
-
 }
 
 //.body {
@@ -282,7 +281,7 @@ ul {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.5);
-    width: 30em;
+    width: calc(30em-4em);
     padding: 2em;
     margin: 8em auto;
   }
@@ -412,6 +411,7 @@ ul {
   // .nav {
   //   padding: 
   // }
+
   .carousel-caption {
     top: 0;
     bottom: auto;
@@ -423,6 +423,7 @@ ul {
   .container-fluid {
     margin: 0 0;
     padding: 0 0;
+
   }
 
   #carouselExampleSlidesOnly {
@@ -457,11 +458,7 @@ ul {
     background: #afe1c3;
     border-color: #afe1c3;
   }
-
-
 }
-
-
 
 @media (max-width: 767px) {
 
@@ -497,13 +494,16 @@ ul {
   }
 }
 
+.about-background {
+  background: #e9ecef;
+}
+
 .jumbotron {
   .btn-custom {
     margin: 20px;
     margin-bottom: 15px;
     background: #93cfab;
     border-color: #93cfab;
-
   }
 
   .btn-custom:hover {
