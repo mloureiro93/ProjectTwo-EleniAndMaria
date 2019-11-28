@@ -1,41 +1,36 @@
-
 <div class="user-profile">
-<h1>{{user.username}}'s Profile</h1>
+  <h1>{{user.username}}'s Profile</h1>
 
-<div class="card">
-  <div class="card-header">
-    My Trip Itinerary
+  <div class="card">
+    <div class="card-header">
+      My Trip Itinerary
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Check the itinerary for your upcoming trip!</h5>
+      <p class="card-text">No trips planned yet? What are you waiting for?</p>
+      <a href="/day1/{{city._id}}" class="btn btn-custom">Itinerary</a>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Check the itinerary for your upcoming trip!</h5>
-    <p class="card-text">No trips planned yet? What are you waiting for?</p>
-    <a href="#" class="btn btn-custom">Itinerary</a>
+
+  <div class="card">
+    <div class="card-header">
+      My Posts
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Check the posts you've made so far</h5>
+      <p class="card-text">No posts yet? Try posting a trip review</p>
+      <a href="post/userPostList" class="btn btn-custom">Posts</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      Review your trip
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Review your trip and share your tips</h5>
+      <p class="card-text">Let us know how your trip went and share the best bits with us</p>
+      <a href="/post/createPost" class="btn btn-custom">Post Review</a>
+    </div>
   </div>
 </div>
-
-<div class="card">
-  <div class="card-header">
-    My Posts
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Check the posts you've made so far</h5>
-    <p class="card-text">No posts yet? Try posting a trip review</p>
-    <a href="post/userPostList" class="btn btn-custom">Posts</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-   Review your trip
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Review your trip and share your tips</h5>
-    <p class="card-text">Let us know how your trip went and share the best bits with us</p>
-    <a href="/post/createPost" class="btn btn-custom">Post Review</a>
-  </div>
-</div>
-</div>
-
-
-
-

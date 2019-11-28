@@ -7,6 +7,7 @@ function randomIndex(array) {
   return Math.floor(Math.random() * Math.floor(array.length));
 }
 const Poi = require("./../models/POI");
+const User = require("./../models/user");
 // const cities = require("./../bin/itinerary");
 
 const Post = require("./../models/post");
@@ -43,7 +44,13 @@ router.post("/tripSelection", (req, res, next) => {
         errorMessage: "Insert your departure point"
       });
     } else {
-      res.redirect("/tripSelection/" + randomCity._id);
+      User.findById(req.user.id).populate("Poi").then(user => {
+          console.log(user);
+          res.redirect("/tripSelection/" + randomCity._id);
+        })
+        .catch(error => {
+          next(error);
+        });
     }
   });
 });
@@ -94,3 +101,8 @@ router.get("/about", (req, res, next) => {
 });
 
 module.exports = router;
+
+// //.then(user => {
+//   console.log(user);
+//   res.redirect("/tripSelection/" + randomCity._id);
+// });
