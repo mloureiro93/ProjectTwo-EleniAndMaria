@@ -1,25 +1,46 @@
 <body class="about-background">
+  <div class="aboutjoin">
+    <div class="jumbotron">
+      <h1 class="display-4">About this app</h1>
+      <p class="lead">Welcome to Two Days Away. Our mission is to make your weekend getaway effortless and fun</p>
+      <hr class="my-4">
+      <p>With the current busy lives we live it can be nice to runaway for a weekend and explore a new place. However
+        deciding where to go and what to do can often be quite demotivating. This is where we come in. Two Days Away App
+        will choose a location at random for you and deliver a perfect 2 day itinerary so all thta' left to do is pack
+        your bags and get that plane ticket.
+        Adventure Awaits!
+      </p>
+      <p>This app was developed in the context of Ironhack Web Development Boothcamp for Project 2.</p>
 
-  <div class="jumbotron">
-    <h1 class="display-4">About</h1>
-    <p class="lead">Welcome to Two Days Away. Our mission is to make your weekend getaway effortless and fun</p>
-    <hr class="my-4">
-    <p>With the current busy lives we live it can be nice to runaway for a weekend and explore a new place. However
-      deciding where to go and what to do can often be quite demotivating. This is where we come in. Two Days Away App
-      will choose a location at random for you and deliver a perfect 2 day itinerary so all thta' left to do is pack
-      your bags and get that plane ticket.
-      Adventure Awaits!
-    </p>
-    <p>This app was developed in the context of Ironhack Web Development Boothcamp for Project 2.</p>
+
+      {{#if user}}
+      <a class="btn btn-custom btn-lg" href="/tripSelection" role="button">Let's begin?</a>
+      {{else}}
+      <a class="btn btn-custom btn-lg" href="/login" role="button">Let's begin?</a>
+      {{/if}}
 
 
-    {{#if user}}
-    <a class="btn btn-custom btn-lg" href="/tripSelection" role="button">Let's begin?</a>
-    {{else}}
-    <a class="btn btn-custom btn-lg" href="/login" role="button">Let's begin?</a>
-    {{/if}}
+    </div>
 
+
+    <div class="jumbotron aboutCreators">
+      <h1 class="display-4">About the Creators</h1>
+      <p class="lead">A little bit about us. </p>
+      <hr class="my-4">
+      <p>We are Eleni from Greece and Maria from Portugal. We both share a passion for travelling and know how a lot of
+        the time planning a trip can be a hard task, specially if you don't have the time to do the research yourself.
+        This is where our app comes in hand. We are here to make all your travelling wishes come true. If you're
+        interested in investing shoot us a message on slack. Sincerelly, your creators.
+        Eleni Zoumpoulaki and Maria Loureiro
+      </p>
+      <div class="pictures">
+        <img src="/images/IMG_1657.JPG" alt="Avatar" class="avatar">
+        <img src="/images/IMG_4321.jpeg" alt="Avatar" class="avatar">
+      </div>
+    </div>
 
   </div>
+
+
 
 </body>

@@ -7,10 +7,10 @@
       <input type="text" id="input-travelingFrom" name="travelingFrom" placeholder="Enter the city of your departure" />
       <button class="btn btn-custom">Find out where your next Adventure begins</button>
       {{#if city}}
-      <h3><strong> {{city.city_name}}</strong></h3>
-      <p><strong> Currency: {{city.currency}}</strong></p>
-      <p><strong> Spoken language: {{city.language}}</strong></p>
-      <p><strong> Country: {{city.country}}</strong></p>
+      <h3 class="cityName">{{city.city_name}}</h3>
+      <h5> Currency: {{city.currency}}</h5>
+      <h5> Spoken language: {{city.language}}</h5>
+      <h5> Country: {{city.country}}</h5>
       <a class="btn-itinerary" href="/day1/{{city._id}}">Go to itinerary</a>
       {{/if}}
       {{#if errorMessage}}
