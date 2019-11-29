@@ -352,6 +352,13 @@ ul {
 
 //Day1 styling
 .ItineraryDay {
+  .btn-outline-white {
+    color: #2c342f;
+    background-color: transparent;
+    background-image: none;
+    border-color: $buttonDark;
+  }
+
   margin-bottom: 2em;
 
   .row {
