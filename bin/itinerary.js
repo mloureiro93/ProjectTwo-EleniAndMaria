@@ -7,6 +7,136 @@ const URI = process.env.HEROKU_MONGOLAB_URI;
 
 const cities = [
   {
+   
+    city_name: "Barcelona",
+    city_description:
+     "Barcelona is one of the world's leading tourist, economic, trade fair and cultural centres, and its influence in commerce, education, entertainment, sports, media, fashion, science, and the arts all contribute to its status as one of the major global cities. Here you’ll find your full itinerary for your weekend getaway in the beautiful city of Barcelona!",
+    country: "Spain",
+    currency: "Euro",
+    language: "Castilian and Catalan",
+    steps: [
+      {
+        day: 1,
+        name: "Flax & Kale",
+        description:
+        
+         "Healthy Flexiteriana Cooking Restaurant by Teresa Carles. Their goal is to show that healthy cooking can be deliciously exciting.",
+        photo:
+          "",
+        website:
+          "https://www.tripadvisor.pt/Restaurant_Review-g187497-d6996799-Reviews-Flax_Kale-Barcelona_Catalonia.html"
+      },
+      {
+        day: 1,
+        name: "Barri Gòtic and Barcelona Cathedral",
+        description:
+        "Stroll around Barcelona’s Barri Gòtic and see Barcelona Cathedral. The Cathedral of the Holy Cross and Saint Eulalia, also known as Barcelona Cathedral, is the Gothic cathedral and seat of the Archbishop of Barcelona, Catalonia, Spain. It was constructed between the thirteenth and fifteenth centuries. The roof is notable for its gargoyles, featuring a wide range of animals, both domestic and mythical.
+          ,
+        photo:
+          "",
+        website:
+          "https://catedralbcn.org/index.php?lang=en"
+      },
+      {
+        day: 1,
+        name: "Meson Jesus Restaurant",
+        description:
+          "A hidden gem where you can eat real spanish food just like a grandmother would make it. Great for tapas with friends and receiver of tripadvisor certificate of excellence",
+        photo:
+          "",
+        website:
+         "https://www.tripadvisor.pt/Restaurant_Review-g187497-d717342-Reviews-MESON_JESUS-Barcelona_Catalonia.html"
+      },
+      {
+        day: 1,
+        name: "Sagrada Familia",
+        description:
+          "The Basílica de la Sagrada Família is a large unfinished Roman Catholic minor basilica. Designed by Catalan architect Antoni Gaudí (1852–1926), his work on the building is part of a UNESCO World Heritage Site. This is one of most emblematic sites in whole of Barcelona and a must see",
+        photo:
+          "",
+        website: "https://sagradafamilia.tickets-barcelona.org/pt/?gclid=Cj0KCQiAoIPvBRDgARIsAHsCw09S6o_kGEXiihqrPecGpQ6JibVdlx92GxMr3rckRdutrjao664DulUaAq5GEALw_wcB"
+      },
+      {
+        day: 1,
+        name: "La Boqueria Restaurant",
+        description:
+          "Founded in 2005, in the emblematic Gothic Quarter, La Boquería Restaurant starts its journey specializing in tapas, paellas, seafood and our selection of dry-aged beef in our charcoal grill. Sharing the culinary experience of traditional Spanish and Catalan market food. Influenced by the neighborhood and the proximity of the La Boquería market, our cuisine has always been in constant evolution without losing the values of our origins.",
+        photo:
+          "",
+        website:
+          "https://www.tripadvisor.com/Restaurant_Review-g187497-d8384662-Reviews-Restaurante_La_Boqueria-Barcelona_Catalonia.html"
+      },
+      {
+        day: 1,
+        name: "The Magic Fountain",
+        description:
+          "The Font Màgica, or Magic Fountain, is the main feature of a complex of fountains, cascades and pools on Avinguda de la Reina Maria Cristina, the street running from the Palau Nacional to Plaça d'Espanya in Montjuïc. The beautiful light show is better seen during nightime",
+        photo:
+          "",
+        website: "https://www.barcelona.cat/en/what-to-do-in-bcn/magic-fountain"
+      },
+      {
+        day: 2,
+        name: "Chök The Chocolate Kitchen",
+        description:
+          "Start the day with the sweetest of breakfasts. Chök is a place dedicated to chocolate, to enjoy and share. A place where the warmth of a kitchen is combined with absolute freedom for creation. The result is both unique and delicious.",
+        photo:
+          "",
+        website:
+          "https://www.tripadvisor.pt/Restaurant_Review-g187497-d4697511-Reviews-Chok_The_Chocolate_Kitchen-Barcelona_Catalonia.html"
+      },
+      {
+        day: 2,
+        name: "Park Güell",
+        description:
+          "The Park Güell is a public park system composed of gardens and architectonic elements located on Carmel Hill. With urbanization in mind, Eusebi Güell assigned the design of the park to Antoni Gaudí.  In 1984, UNESCO declared the park a World Heritage Site under Works of Antoni Gaudí. A proper must see location when in Barcelona"
+        photo:
+          "",
+        website:
+          "https://www.parkguelltickets.org/?gclid=Cj0KCQiAoIPvBRDgARIsAHsCw09O3kJC_K3L02dyjM4TEcTES3UBX147-Zq6Tq__T5wc-53acyxVg9YaAgfYEALw_wcB"
+      },
+      {
+        day: 2,
+        name: "Restaurant Caravelle",
+        description:
+          "A fresh and cool restaurant in a vibrant Barcelona neighborhoob. At Caravelle    all their ingredients are market-sourced, freshly cooked and always seasonal. The Tacos are piled high with home-made pickles, crispy fried fish, smoked carnitas, tender beef, rotisserie chicken, truffled mushrooms and lots more. The Caravelle Double Cheeseburger packs a double patty, bacon jam, bacon, trashy cheddar & home-made pickles. Try it with a liberal sprinkling of Caravelle Hot Sauce.",
+        photo:
+          "",
+        website:
+          "https://www.tripadvisor.com/Restaurant_Review-g187497-d3499028-Reviews-Caravelle-Barcelona_Catalonia.html"
+      },
+      {
+        day: 2,
+        name: "Walk through the Ramblas and visit the Boqueria Market",
+        description:
+          "The famous Ramblas are a central avenue, which runs through the city center. It is a lively and dynamic avenue, full of the best that happens in Barcelona and often filled with street performances. During your walk visit the Mercat de Sant Josep, popularly known as La Boquería. This municipal market besides being a place where you can buy all kinds of fresh produce, it is also a major tourist attraction",
+        photo:
+          "",
+        website: "http://www.boqueria.barcelona/home"
+      },
+      {
+        day: 2,
+        name: "Restaurant Nou Celler",
+        description:
+          "Located on the popular Carrer Princesa in the El Born neighbourhood of Barcelona, it would be fair to assume that Nou Cellar caters mostly to the tourist crowds – not so. Locals know that this is a serious establishment which prides itself on serving authentic Catalan cuisine.",
+        photo:
+          "",
+        website:
+          "https://www.tripadvisor.com/Restaurant_Review-g187497-d1100311-Reviews-Nou_Celler-Barcelona_Catalonia.html"
+      },
+      {
+        day: 2,
+        name: "Casa Mila (La Pedrera) and Casa Batlló ",
+        description:
+          "Take an evening stroll and make your way to these iconic Gaudí designed buildings. This will give you a chance to not only enjoy the street views of Barcelona but also admire some incredible architecture",
+        photo:
+          "",
+        website:
+          "https://www.tiqets.com/en/barcelona-c66342/casa-mila-la-pedrera-l145464"
+      }
+    ]
+  },
+  {
     // _id: "1",
     city_name: "Copenhagen",
     city_description:
