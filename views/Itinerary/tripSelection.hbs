@@ -1,16 +1,21 @@
 <body class="trip-selection">
   <div class="container-fluid">
     <form class="tripSelectionForm" action="/tripSelection" method="POST">
-      <label for="input-travelingFrom">Where will you be Traveling from:</label>
+      <label for="input-travelingFrom">
+        <h3>Where will you be Traveling from:</h3>
+      </label>
       <input type="text" id="input-travelingFrom" name="travelingFrom" placeholder="Enter the city of your departure" />
       <button class="btn btn-custom">Find out where your next Adventure begins</button>
       {{#if city}}
-      <strong> {{city.city_name}}</strong>
+      <h3><strong> {{city.city_name}}</strong></h3>
+      <p><strong> Currency: {{city.currency}}</strong></p>
+      <p><strong> Spoken language: {{city.language}}</strong></p>
+      <p><strong> Country: {{city.country}}</strong></p>
       <a class="btn-itinerary" href="/day1/{{city._id}}">Go to itinerary</a>
       {{/if}}
-    {{#if errorMessage}}
-    <div class="error-message"><strong>{{ errorMessage }}</strong></div>
-    {{/if}}
+      {{#if errorMessage}}
+      <div class="error-message"><strong>{{ errorMessage }}</strong></div>
+      {{/if}}
     </form>
 
 
