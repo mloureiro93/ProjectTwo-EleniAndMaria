@@ -1,5 +1,5 @@
+# Ironhack Web Dev 2nd Project
 
-Ironhack WebDev 2nd Project
 
 This project was inspired by our love for travelling and the knowledge that often deciding where to go and planning activities can be overwelming.
 
